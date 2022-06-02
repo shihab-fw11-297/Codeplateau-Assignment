@@ -1,6 +1,7 @@
 const router = require("express").Router()
 const {
-    userRegister
+    userRegister,
+    userLogin
 } = require("../controller/Auth");
 
 // Users Registeration Route
@@ -10,7 +11,7 @@ router.post("/register-user", async (req, res) => {
 
 // Users Login Route
 router.post("/login-user", async (req, res) => {
-  //  await userLogin(req.body, "user", res);
+    await userLogin(req.body, "user", res);
 });
 
 
